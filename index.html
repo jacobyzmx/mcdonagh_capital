@@ -107,6 +107,21 @@
       left: 25%;
     }
 
+    .card {
+      border: 2px solid rgba(255,255,255,0.2) !important;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s;
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
     .footer {
       background-color: #333;
       padding: 30px 0;
@@ -148,7 +163,7 @@
 
   <!-- Hero Section -->
   <div class="container">
-    <header class="jumbotron text-center">
+    <header class="jumbotron">
       <h1 class="display-4">McDonagh Capital</h1>
       <p class="lead">Building the foundation for New Zealand real estate investment</p>
     </header>
@@ -156,11 +171,9 @@
     <!-- About Us -->
     <section id="about">
       <h2>About Us</h2>
-      <div class="container">
-        <p>McDonagh Capital is a New Zealand-based investment company with a long-term vision for real estate growth.</p>
-        <p>Founded by a driven individual with a passion for financial independence and property development, McDonagh Capital is currently focused on building its first property and laying the foundation for future investment opportunities.</p>
-        <p>While still in its early stages, the company is driven by integrity, strategy, and a commitment to long-term value — with eyes on residential and mixed-use properties across New Zealand.</p>
-      </div>
+      <p>McDonagh Capital is a New Zealand-based investment company with a long-term vision for real estate growth.</p>
+      <p>Founded by a driven individual with a passion for financial independence and property development, McDonagh Capital is currently focused on building its first property and laying the foundation for future investment opportunities.</p>
+      <p>While still in its early stages, the company is driven by integrity, strategy, and a commitment to long-term value — with eyes on residential and mixed-use properties across New Zealand.</p>
     </section>
 
     <!-- Investments -->
