@@ -3,13 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>McDonagh Capital</title>
+  <meta name="description" content="McDonagh Capital - NZ real estate investment and development">
+  <title>McDonagh Capital | NZ Real Estate Investments</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
 
   <!-- Bootstrap CSS -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome (for Instagram icon) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
   <style>
     html {
@@ -31,6 +35,7 @@
     .navbar {
       background-color: #333;
       padding: 8px 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
     .navbar-brand {
@@ -40,35 +45,106 @@
     }
 
     .logo {
-      max-width: 180px;
+      max-width: 200px; /* Even larger logo */
       height: auto;
       display: block;
+      transition: opacity 0.3s;
+    }
+
+    .logo:hover {
+      opacity: 0.9;
     }
 
     .nav-link {
       font-size: 1.1rem;
       padding: 0.5rem 1rem;
+      margin: 0 5px;
+      transition: color 0.3s;
+    }
+
+    .nav-link:hover {
+      color: #ddd !important;
     }
 
     .jumbotron {
       background: linear-gradient(145deg, #222, #333);
       color: #fff;
-      padding: 30px 15px;
-      margin-bottom: 20px;
+      padding: 40px 15px;
+      margin-bottom: 30px;
       border-radius: 0.5rem;
     }
 
     .jumbotron h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      font-weight: 600;
     }
 
     .jumbotron p {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
+      opacity: 0.9;
     }
 
     .btn-outline-light {
       font-weight: 600;
+      padding: 10px 25px;
+      border-width: 2px;
+      transition: all 0.3s;
+    }
+
+    .btn-outline-light:hover {
+      background-color: rgba(255,255,255,0.1);
+    }
+
+    section {
+      padding: 60px 0;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+      position: relative;
+      display: inline-block;
+    }
+
+    h2:after {
+      content: '';
+      position: absolute;
+      width: 50%;
+      height: 3px;
+      background: linear-gradient(90deg, #333, #fff, #333);
+      bottom: -10px;
+      left: 25%;
+    }
+
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s;
+      border: 1px solid rgba(255,255,255,0.1) !important;
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+
+    .card-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    #contact a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: opacity 0.3s;
+    }
+
+    #contact a:hover {
+      opacity: 0.8;
+      text-decoration: underline;
     }
 
     .footer {
@@ -76,27 +152,52 @@
       padding: 30px 0;
       font-size: 0.9rem;
       text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.1);
     }
 
-    .card {
-      transition: transform 0.3s ease;
+    .footer a {
+      color: #fff;
+      transition: opacity 0.3s;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
+    .footer a:hover {
+      opacity: 0.8;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .logo {
+        max-width: 160px;
+      }
+      
+      .jumbotron h1 {
+        font-size: 2.2rem;
+      }
+      
+      .jumbotron p {
+        font-size: 1.1rem;
+      }
+      
+      section {
+        padding: 40px 0;
+      }
     }
 
     @media (max-width: 576px) {
       .logo {
         max-width: 140px;
       }
-
+      
       .container {
         padding: 15px;
       }
-
+      
       .jumbotron {
-        padding: 20px 10px;
+        padding: 30px 10px;
+      }
+      
+      h2 {
+        font-size: 1.8rem;
       }
     }
   </style>
@@ -113,7 +214,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
         <li class="nav-item"><a class="nav-link" href="#investments">Investments</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
@@ -124,54 +225,78 @@
   <!-- Hero Section -->
   <div class="container">
     <header class="jumbotron text-center">
-      <h1 class="display-4">Welcome to McDonagh Capital</h1>
-      <p class="lead">Your trusted partner in investments</p>
-      <a href="#investments" class="btn btn-outline-light mt-3">View Investments</a>
+      <h1 class="display-4">McDonagh Capital</h1>
+      <p class="lead">Building the foundation for New Zealand real estate investment</p>
+      <div class="mt-4">
+        <a href="#investments" class="btn btn-outline-light mr-3">Our Focus</a>
+        <a href="#about" class="btn btn-outline-light">Our Story</a>
+      </div>
     </header>
 
     <!-- About Us Section -->
-    <section id="about" class="my-5 text-center">
-      <h2>About McDonagh Capital</h2>
-      <p>McDonagh Capital is a New Zealand-based investment company with a long-term vision for real estate growth.</p>
-      <p>Founded by a driven individual with a passion for financial independence and property development, McDonagh Capital is currently focused on building its first property and laying the foundation for future investment opportunities.</p>
-      <p>While still in its early stages, the company is driven by integrity, strategy, and a commitment to long-term value — with eyes on residential and mixed-use properties across New Zealand.</p>
+    <section id="about" class="my-5">
+      <div class="container">
+        <h2 class="text-center">About Us</h2>
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <p>McDonagh Capital is a New Zealand-based investment company with a long-term vision for real estate growth.</p>
+            <p>Founded by a driven individual with a passion for financial independence and property development, McDonagh Capital is currently focused on building its first property and laying the foundation for future investment opportunities.</p>
+            <p>While still in its early stages, the company is driven by integrity, strategy, and a commitment to long-term value — with eyes on residential and mixed-use properties across New Zealand.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Investments Section -->
-    <section id="investments" class="text-center my-5">
-      <h2>Our Investments</h2>
-      <div class="row mt-4">
-        <div class="col-md-6 mb-4">
-          <div class="card bg-dark text-white border-light">
-            <div class="card-body">
-              <h5 class="card-title">Real Estate</h5>
-              <p class="card-text">Diversified property portfolio in NZ.</p>
+    <section id="investments" class="py-5 bg-dark">
+      <div class="container">
+        <h2 class="text-center">Our Investments</h2>
+        <div class="row mt-4">
+          <div class="col-md-6 mb-4">
+            <div class="card bg-transparent text-white">
+              <div class="card-body text-center">
+                <h5 class="card-title">Real Estate</h5>
+                <p class="card-text">Strategic property investments across New Zealand, focusing on long-term growth and community development.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card bg-transparent text-white">
+              <div class="card-body text-center">
+                <h5 class="card-title">Startups</h5>
+                <p class="card-text">Supporting innovative early-stage ventures with potential for disruption and scalable impact.</p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-md-6 mb-4">
-          <div class="card bg-dark text-white border-light">
-            <div class="card-body">
-              <h5 class="card-title">Startups</h5>
-              <p class="card-text">Backing promising early-stage ventures.</p>
-            </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+      <div class="container">
+        <h2 class="text-center">Get In Touch</h2>
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <p class="lead">Follow our journey and connect with us</p>
+            <a href="https://instagram.com/mcdonaghcapital" target="_blank" class="btn btn-outline-light mt-3">
+              <i class="fab fa-instagram mr-2"></i> @mcdonaghcapital
+            </a>
           </div>
         </div>
       </div>
     </section>
   </div>
 
-  <!-- Contact Section -->
-  <section id="contact" class="text-center my-5">
-    <h2>Contact</h2>
-    <p>📲 **Follow us on Instagram**: <a href="https://instagram.com/mcdonaghcapital" target="_blank" class="text-light">@mcdonaghcapital</a></p>
-  </section>
-
   <!-- Footer -->
   <footer class="footer">
-    <p>© 2024 McDonagh Capital. All rights reserved.</p>
-    <div>
-      <a href="https://instagram.com/mcdonaghcapital" class="text-light mx-2">Instagram</a>
+    <div class="container">
+      <p>© 2024 McDonagh Capital. All rights reserved.</p>
+      <div class="mt-2">
+        <a href="https://instagram.com/mcdonaghcapital" target="_blank" class="mx-2">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
     </div>
   </footer>
 
@@ -179,5 +304,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
