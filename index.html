@@ -127,21 +127,14 @@
       left: 25%;
     }
 
-    .card {
-      border: 2px solid rgba(255,255,255,0.2) !important;
-      padding: 30px;
-      transition: transform 0.3s ease, box-shadow 0.3s;
-      min-height: 220px;
-      display: flex;
-      align-items: center;
-      text-align: center;
-      background: #111;
-      animation: fadeIn 1.2s ease-in-out;
+    .content-section {
+      padding: 20px;
+      text-align: left;
     }
 
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    .content-section p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
     }
 
     .footer {
@@ -159,20 +152,17 @@
     <a class="navbar-brand" href="#">
       <img src="logo.png" alt="McDonagh Capital Logo" class="logo">
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" 
+            data-target="#navbarNav" aria-controls="navbarNav" 
+            aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
-        <!-- Only these items remain -->
         <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-        <li class="nav-item">
-          <a class="nav-link" href="real-estate-investments.html">Real Estate</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="strategic-portfolio-companies.html">Companies</a>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="real-estate-investments.html">Real Estate</a></li>
+        <li class="nav-item"><a class="nav-link" href="strategic-portfolio-companies.html">Companies</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -221,7 +211,7 @@
       </div>
     </section>
 
-    <!-- Contact -->
+    <!-- Contact Section -->
     <section id="contact">
       <h2>Get In Touch</h2>
       <a href="https://instagram.com/mcdonaghcapital" target="_blank" class="btn btn-outline-light">
