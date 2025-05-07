@@ -1,65 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>McDonagh Capital</title>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background-color: #000;
       color: #fff;
-      font-family: 'Arial', sans-serif;
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
     }
+
     .container {
       max-width: 1140px;
       padding: 20px;
     }
+
     .navbar {
       background-color: #333;
       padding: 8px 20px;
     }
+
     .navbar-brand {
       display: flex;
       align-items: center;
       padding: 0;
     }
+
     .logo {
       max-width: 100px;
       height: auto;
       display: block;
     }
+
     .nav-link {
       font-size: 1.1rem;
       padding: 0.5rem 1rem;
     }
+
     .jumbotron {
-      background-color: #333;
+      background: linear-gradient(145deg, #222, #333);
       color: #fff;
       padding: 30px 15px;
       margin-bottom: 20px;
       border-radius: 0.5rem;
     }
+
     .jumbotron h1 {
       font-size: 2.5rem;
       margin-bottom: 10px;
     }
+
     .jumbotron p {
       font-size: 1.2rem;
     }
+
+    .btn-outline-light {
+      font-weight: 600;
+    }
+
     .footer {
       background-color: #333;
       padding: 30px 0;
       font-size: 0.9rem;
       text-align: center;
     }
+
+    .card {
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
     @media (max-width: 576px) {
       .logo {
         max-width: 80px;
       }
+
       .container {
         padding: 15px;
       }
+
       .jumbotron {
         padding: 20px 10px;
       }
@@ -67,50 +102,76 @@
   </style>
 </head>
 <body>
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark">
     <a class="navbar-brand" href="#">
-      <img src="logo.png" alt="McDonagh Capital Logo" class="logo">
+      <img src="logo.png" alt="McDonagh Capital Logo" class="logo" />
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Investments</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="business.html">Business</a>
-        </li>
+        <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="#investments">Investments</a></li>
+        <li class="nav-item"><a class="nav-link" href="business.html">Business</a></li>
       </ul>
     </div>
   </nav>
 
+  <!-- Hero Section -->
   <div class="container">
     <header class="jumbotron text-center">
       <h1 class="display-4">Welcome to McDonagh Capital</h1>
       <p class="lead">Your trusted partner in investments</p>
+      <a href="#investments" class="btn btn-outline-light mt-3">View Investments</a>
     </header>
 
+    <!-- Investments Section -->
     <section id="investments" class="text-center my-5">
       <h2>Our Investments</h2>
-      <p>Placeholder for investments content.</p>
+      <div class="row mt-4">
+        <div class="col-md-4 mb-4">
+          <div class="card bg-dark text-white border-light">
+            <div class="card-body">
+              <h5 class="card-title">Real Estate</h5>
+              <p class="card-text">Diversified property portfolio in NZ.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card bg-dark text-white border-light">
+            <div class="card-body">
+              <h5 class="card-title">Startups</h5>
+              <p class="card-text">Backing promising early-stage ventures.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card bg-dark text-white border-light">
+            <div class="card-body">
+              <h5 class="card-title">Crypto</h5>
+              <p class="card-text">Innovative crypto and blockchain investments.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </div>
 
+  <!-- Footer -->
   <footer class="footer">
     <p>© 2024 McDonagh Capital. All rights reserved.</p>
+    <div>
+      <a href="#" class="text-light mx-2">LinkedIn</a> |
+      <a href="mailto:info@mcdonaghcapital.com" class="text-light mx-2">Email Us</a>
+    </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
