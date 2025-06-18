@@ -10,34 +10,65 @@
   <link rel="icon" type="image/png" href="favicon.png">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet"
+  >
 
   <!-- Bootstrap CSS -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  >
 
   <style>
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       background-color: #000;
       color: #fff;
       font-family: 'Poppins', sans-serif;
       line-height: 1.8;
     }
-    .container { max-width: 1140px; padding: 20px; }
-    .navbar { background-color: #222; padding: 10px 20px; border-bottom: 1px solid rgba(255,255,255,0.2); }
-    .navbar-brand { display: flex; align-items: center; padding: 0; }
-    .logo { max-width: 200px; height: auto; display: block; transition: opacity 0.3s; }
-    .logo:hover { opacity: 0.9; }
+    .container {
+      max-width: 1140px;
+      padding: 20px;
+    }
+    .navbar {
+      background-color: #222;
+      padding: 10px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      padding: 0;
+    }
+    .logo {
+      max-width: 200px;
+      height: auto;
+      display: block;
+      transition: opacity 0.3s;
+    }
+    .logo:hover {
+      opacity: 0.9;
+    }
     .nav-link {
       font-size: 1.1rem;
       padding: 0.6rem 1.2rem;
       margin: 0 5px;
       transition: color 0.3s ease-in-out;
     }
-    .nav-link:hover { color: #bbb !important; }
+    .nav-link:hover {
+      color: #bbb !important;
+    }
     .jumbotron {
       background: linear-gradient(145deg, #222, #333);
       color: #fff;
@@ -48,8 +79,21 @@
       animation: fadeIn 1.2s ease-in-out;
     }
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .main-logo {
+      max-width: 80%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      padding-bottom: 20px;
     }
     .btn-outline-light {
       font-weight: 600;
@@ -58,8 +102,13 @@
       transition: all 0.3s;
       font-size: 1.1rem;
     }
-    .btn-outline-light:hover { background-color: rgba(255,255,255,0.2); }
-    section { padding: 60px 0; text-align: center; }
+    .btn-outline-light:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    section {
+      padding: 60px 0;
+      text-align: center;
+    }
     h2 {
       font-size: 2.6rem;
       font-weight: 600;
@@ -76,7 +125,10 @@
       bottom: -10px;
       left: 25%;
     }
-    .content-section { padding: 20px; text-align: left; }
+    .content-section {
+      padding: 20px;
+      text-align: left;
+    }
     .content-section p {
       font-size: 1.1rem;
       margin-bottom: 20px;
@@ -86,4 +138,130 @@
       padding: 30px 0;
       font-size: 1rem;
       text-align: center;
-      border-top
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .form-control {
+      background-color: #111;
+      border: 1px solid #333;
+      color: #fff;
+    }
+    .form-control::placeholder {
+      color: #888;
+    }
+    label {
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="index.html">
+      <img src="logo.png" alt="McDonagh Capital Logo" class="logo">
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="real-estate-investments.html">Real Estate</a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="strategic-portfolio-companies.html"
+          >Companies</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="container">
+    <header class="jumbotron">
+      <h1>Contact Us</h1>
+      <p class="lead">
+        We'd love to hear from you. Feel free to reach out through the form
+        below or connect with us on Instagram.
+      </p>
+    </header>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form" class="content-section">
+      <h2>Send Us a Message</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Your name"
+          >
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Your email"
+          >
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea
+            class="form-control"
+            id="message"
+            rows="5"
+            placeholder="Your message"
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-outline-light">
+          Submit
+        </button>
+      </form>
+    </section>
+
+    <!-- Additional Contact Information -->
+    <section id="contact-info" class="content-section">
+      <h2>Other Ways to Connect</h2>
+      <p>
+        Follow us on Instagram:
+        <a
+          href="https://instagram.com/mcdonaghcapital"
+          target="_blank"
+          style="color: #fff;"
+        >@mcdonaghcapital</a>
+      </p>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 McDonagh Capital. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+  ></script>
+</body>
+</html>
+```
