@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>McDonagh Capital - Coming Soon</title>
+  <!-- Tailwind CSS CDN for styling -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts for Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- React and ReactDOM CDNs -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <!-- Babel CDN for JSX transformation in the browser -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+    /* Custom styles that can't be easily done with Tailwind or for specific overrides */
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div> <!-- This is where your React app will be mounted -->
+
+  <script type="text/babel">
+    // Main App component for the Coming Soon page
+    const App = () => {
+
+      return (
+        // Main container div with the background image and overlay
+        <div
+          className="min-h-screen flex items-center justify-center p-4 font-sans relative overflow-hidden"
+          style={{
+            // Set the background image
+            backgroundImage: `url('background.jpg')`, // Path to your uploaded background image
+            backgroundSize: 'cover', // Ensures the image covers the entire background
+            backgroundPosition: 'center', // Centers the background image
+            backgroundRepeat: 'no-repeat', // Prevents the image from repeating
+            backgroundAttachment: 'fixed', // Keeps the background fixed when scrolling
+          }}
+        >
+          {/* Semi-transparent black overlay for readability */}
+          <div className="absolute inset-0 bg-black opacity-70"></div>
+
+          {/* Content card with rounded corners and shadow, now with a darker, more consistent theme */}
+          <div className="relative bg-black bg-opacity-70 backdrop-blur-sm p-8 md:p-12 rounded-2xl shadow-xl max-w-2xl w-full text-center border border-gray-900 text-white">
+            {/* Company Logo */}
+            <div className="mb-8">
+              {/* Using the provided logo.png. Adjust width as needed for responsive design. */}
+              <img
+                src="logo.png" // Path to your uploaded logo
+                alt="McDonagh Capital Logo"
+                className="mx-auto rounded-lg shadow-md w-[320px] md:w-[420px] filter drop-shadow-[0_4px_10px_rgba(0,0,0,0.5)]"
+                // Fallback for image loading errors
+                onError={(e) => { e.target.onerror = null; e.target.src="https://placehold.co/420x80/000000/FFFFFF?text=McDonagh+Capital"; }}
+              />
+            </div>
+
+            {/* Coming Soon message - adjusted to a lighter gray for subtlety */}
+            <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-gray-400">
+              Coming Soon
+            </h2>
+
+            {/* Main message */}
+            <p className="text-lg md:text-xl text-gray-200 mb-8 leading-relaxed">
+              Strategic investing in property, digital assets, and long-term wealth generation.
+            </p>
+
+            {/* Contact Us Button */}
+            <a
+              href="mailto:jacob@mcdonagh.capital"
+              className="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-8 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 focus:ring-offset-black"
+              aria-label="Contact Us via Email"
+            >
+              Contact Us
+            </a>
+
+            {/* Copyright information */}
+            <div className="mt-12 text-gray-500 text-sm md:text-base">
+              <p>&copy; {new Date().getFullYear()} McDonagh Capital. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      );
+    };
+
+    // Render the React App component into the 'root' div
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>
